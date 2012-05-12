@@ -1,12 +1,19 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.3'
+gem 'oj'
+
+gem 'mongoid', '~> 2.4'
+gem 'bson_ext', '~> 1.5'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 group :development do
   gem 'rails-dev-boost', :git => 'https://github.com/thedarkone/rails-dev-boost.git', :require => 'rails_development_boost'
+  gem 'linecache19', '0.5.13'
+  gem 'ruby-debug-base19', '0.11.26'
+  gem 'ruby-debug19', :require => 'ruby-debug'
 end
 
 group :test, :development do
@@ -14,7 +21,17 @@ group :test, :development do
 end
 
 group :test do
+  gem 'rspec-instafail'
+  gem 'launchy'
   gem 'capybara'
+  gem 'ruby_gntp'
+  gem 'guard-webrick'
+  gem 'guard-bundler'
+  gem 'guard-spork', '0.3.2'
+  gem 'spork', '~> 0.9.1'
+  gem 'cucumber-rails', :require => false
+  # database_cleaner is not required, but highly recommended
+  gem 'database_cleaner'
 end
 
 
