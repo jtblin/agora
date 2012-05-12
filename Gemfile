@@ -22,6 +22,7 @@ end
 
 group :test do
   gem 'rspec-instafail'
+  gem 'factory_girl_rails'
   gem 'launchy'
   gem 'capybara'
   gem 'ruby_gntp'
@@ -30,8 +31,11 @@ group :test do
   gem 'guard-spork', '0.3.2'
   gem 'spork', '~> 0.9.1'
   gem 'cucumber-rails', :require => false
-  # database_cleaner is not required, but highly recommended
   gem 'database_cleaner'
+  gem 'simplecov', :require => false
+  gem 'simplecov-rcov', :require => false
+  gem 'metrical'
+  gem 'churn', '0.0.13' # Secondary dependency from metrical, v0.0.15 brings in git as dependency
 end
 
 

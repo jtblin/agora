@@ -14,6 +14,7 @@ bundler_stubs/
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+coverage
 
 # Ignore RubyMine files
 .idea/
